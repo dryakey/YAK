@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="AutinPower.WPF.Controls.UI_LoadingInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutinPower.WPF.Controls"
+             mc:Ignorable="d" Height="85" Width="520" Opacity="0.8">
+    <Grid Opacity="0.8" Background="#FFC9C9C9">
+        <Grid.Effect>
+            <DropShadowEffect Color="#FFBFBFBF" BlurRadius="10" Direction="315" Opacity="0.8"/>
+        </Grid.Effect>
+        <local:UI_LoadingSpinner HorizontalAlignment="Left" Height="64" Margin="10,10,0,0" VerticalAlignment="Top" Width="64"/>
+        <TextBlock Margin="79,10,10,0" TextWrapping="Wrap" Text="加载中 . . ." VerticalAlignment="Top" Height="23" Opacity="0.995" FontWeight="Bold" FontFamily="Arial" FontSize="20" Foreground="#FF0576D4"/>
+        <TextBlock Margin="79,38,10,0" TextWrapping="Wrap" Text="{Binding LoadingInfo}" VerticalAlignment="Top" Height="36" Opacity="0.995" FontFamily="Arial" FontSize="14" Foreground="Black" x:Name="textblockInfo"/>
+    </Grid>
+</UserControl>

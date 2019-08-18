@@ -1,0 +1,52 @@
+﻿<Page x:Class="AutinPower.WPF.Pages.PageBusLoad"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutinPower.WPF.Pages"
+      xmlns:Controls="clr-namespace:AutinPower.WPF.Controls"
+      mc:Ignorable="d" Height="auto" Width="auto"
+      Title="PageBusLoadPredict">
+
+    <Grid x:Name="gridMain">
+        <DockPanel Margin="0" Grid.Row="1" LastChildFill="True">
+            <Border DockPanel.Dock="Left" Background="White" CornerRadius="3" Margin="0,0,0,10">
+                <Border.Effect>
+                    <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                </Border.Effect>
+                <DockPanel LastChildFill="True">
+                    <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UITitle}" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                    </Border>
+                    <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" DockPanel.Dock="Top" >
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="母线选择：" VerticalAlignment="Top" Height="15" Width="64" Margin="5,8,0,0"/>
+                        <ComboBox x:Name="comboBoxBus" HorizontalAlignment="Left" Margin="5,5" VerticalAlignment="Top" Width="141" ItemsSource="{Binding NodeLabels}" Background="{x:Null}" Height="21" SelectionChanged="comboBoxBus_SelectionChanged"/>
+                        <Button x:Name="buttonImport" Content="导入" VerticalAlignment="Top" Height="21" Margin="5,5,5,0" Click="buttonImport_Click" HorizontalAlignment="Left" Width="56"/>
+                    </StackPanel>
+                    <DataGrid x:Name="dataGridBusLoad" Margin="5" 
+                      AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Path=PowerLoad}"
+                      CellEditEnding="dataGridBusLoad_CellEditEnding">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding PeriodId, Mode=TwoWay}" ClipboardContentBinding="{x:Null}" Header="段号"/>
+                            <DataGridTextColumn Binding="{Binding Load, Mode=TwoWay}" ClipboardContentBinding="{x:Null}" Header="母线负荷（MW）" Width="150"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </DockPanel>
+            </Border>
+
+            <Border Background="White" CornerRadius="3" Margin="10,0,0,10">
+                <Border.Effect>
+                    <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                </Border.Effect>
+                <DockPanel LastChildFill="True">
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding UITitle, StringFormat={}{0}曲线}" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                        </Border>
+                        <Controls:UI_LineChart x:Name="uiChart" Margin="10" Grid.Column="1"/>
+                    </DockPanel>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+    </Grid>
+</Page>

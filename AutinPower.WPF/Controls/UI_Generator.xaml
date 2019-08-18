@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="AutinPower.WPF.Controls.UI_Generator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutinPower.WPF.Controls"
+             xmlns:Controls="clr-namespace:AutinPower.WPF.Controls"
+             mc:Ignorable="d" Width="75" Height="64" Loaded="UserControl_Loaded">
+
+    <Grid x:Name="mainGrid" Cursor="Hand" MouseDown="mainGrid_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="imageGenerator" Margin="14,16" Source="/AutinPower.WPF;component/Images/cross.png">
+            <Image.Resources>
+                <Storyboard x:Key="spin">
+                    <DoubleAnimation x:Name="rotateAnimation" 
+                                Storyboard.TargetName="TransRotate"
+                                Storyboard.TargetProperty="Angle"
+                                By="360"
+                                Duration="0:0:20"
+                                AutoReverse="False"
+                                RepeatBehavior="Forever"     
+                                />
+                </Storyboard>
+            </Image.Resources>
+            <Image.RenderTransform>
+                <RotateTransform x:Name="TransRotate" CenterX="18" CenterY="16" Angle="0" />
+            </Image.RenderTransform>
+        </Image>
+        <Rectangle x:Name="recLink" Margin="0,25" Fill="{Binding LinkColor}" Grid.Column="1"/>
+        <Ellipse x:Name="ellGenerator" StrokeThickness="5" Stroke="{Binding StrokeColor}" Cursor="Hand" MouseDown="Ellipse_MouseDown"/>
+    </Grid>
+</UserControl>

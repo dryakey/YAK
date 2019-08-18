@@ -1,0 +1,224 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutinPower.WPF.Pages"
+      xmlns:Controls="clr-namespace:AutinPower.WPF.Controls" x:Class="AutinPower.WPF.Pages.PageRealTimeDayMarket"
+      mc:Ignorable="d"
+      Title="PageRealTimeDayMarket" Height="auto" Width="auto">
+    
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="260*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="1"  Margin="49,34,43,30" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,3,0,0" TextWrapping="Wrap" Text="日前市场运行" VerticalAlignment="Top" Height="29" Width="181" FontSize="20" FontWeight="Bold" FontFamily="Elephant" Foreground="DodgerBlue"/>
+        <!--<WrapPanel Margin="10,37,10,0" Grid.ColumnSpan="2">
+            <Button x:Name="buttonSave_Copy1" Content="边际机组分析​" VerticalAlignment="Top" BorderBrush="#FF1BD390" Background="{x:Null}" Style="{DynamicResource RoundCorner}" Height="26" HorizontalAlignment="Right" Width="100" Margin="5,2,0,0"/>
+            <Button x:Name="buttonSave_Copy2" Content="节点电价分析​" VerticalAlignment="Top" BorderBrush="#FF1BD390" Background="{x:Null}" Style="{DynamicResource RoundCorner}" Height="26" HorizontalAlignment="Right" Width="100" Margin="5,2,0,0"/>
+            <Button x:Name="buttonSave_Copy3" Content="申报分析" VerticalAlignment="Top" BorderBrush="#FF1BD390" Background="{x:Null}" Style="{DynamicResource RoundCorner}" Height="26" HorizontalAlignment="Right" Width="100" Margin="5,2,0,0"/>
+            <Button x:Name="buttonSave_Copy4" Content="时间控制按钮​" VerticalAlignment="Top" BorderBrush="#FF1BD390" Background="{x:Null}" Style="{DynamicResource RoundCorner}" Height="26" HorizontalAlignment="Right" Width="100" Margin="5,2,0,0"/>
+        </WrapPanel>-->
+        <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="auto" VerticalScrollBarVisibility="auto">
+            <DockPanel LastChildFill="True" Margin="10" Grid.Row="1">
+            <DockPanel LastChildFill="True" Width="615" DockPanel.Dock="Left">
+                <DockPanel Height="126" LastChildFill="True" VerticalAlignment="Bottom"  Margin="0,0,0,0" DockPanel.Dock="Bottom">
+                    <Border Width="300" DockPanel.Dock="Left" Background="White" CornerRadius="3">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                        </Border.Effect>
+                        <DockPanel Height="126" LastChildFill="False" VerticalAlignment="Top" Width="300">
+                            <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="市场力检测" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                            </Border>
+                            <WrapPanel Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" DockPanel.Dock="Top" Margin="5,5,5,2">
+                                <Label Content="申报最大发电能力:" Width="110" HorizontalAlignment="Left"/>
+                                <Label Content="59064 MW" Width="80" HorizontalAlignment="Left"/>
+                            </WrapPanel>
+                            <WrapPanel Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" DockPanel.Dock="Top" Margin="5,0,5,2">
+                                <Label Content="市场HHI:" Width="110" HorizontalAlignment="Left"/>
+                                <Label Content="2782" Width="80" HorizontalAlignment="Left"/>
+                            </WrapPanel>
+                            <WrapPanel Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" DockPanel.Dock="Top" Margin="5,0,5,2">
+                                <Label Content="最小供需比:" Width="74" HorizontalAlignment="Left"/>
+                                <Label Content="1.60" Width="41" HorizontalAlignment="Left"/>
+                                <Label Content="平均供需比:" Width="74" HorizontalAlignment="Left"/>
+                                <Label Content="1.91" Width="41" HorizontalAlignment="Left"/>
+                            </WrapPanel>
+                        </DockPanel>
+                    </Border>
+                    <Border DockPanel.Dock="Left" Background="White" CornerRadius="3" Margin="10,0,0,0">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                        </Border.Effect>
+                        <DockPanel Height="126" LastChildFill="False" VerticalAlignment="Top">
+                            <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="运行情况" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                            </Border>
+                            <WrapPanel Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" DockPanel.Dock="Top" Margin="5,5,5,2">
+                                <Label Content="发电机组:" Width="73" HorizontalAlignment="Left"/>
+                                <Label Content="运行 160 台" Width="80" HorizontalAlignment="Left"/>
+                            </WrapPanel>
+                            <WrapPanel Height="30" VerticalAlignment="Top" HorizontalAlignment="Stretch" FlowDirection="LeftToRight" DockPanel.Dock="Top" Margin="5,5,5,2">
+                                <Label Content="输电线路:" Width="73" HorizontalAlignment="Left"/>
+                                <Label Content="运行 1497 条" Width="80" HorizontalAlignment="Left"/>
+                            </WrapPanel>
+                        </DockPanel>
+                    </Border>
+                </DockPanel>
+                <DockPanel Height="180" LastChildFill="True" VerticalAlignment="Bottom"  Margin="0,0,0,0" DockPanel.Dock="Bottom">
+                    <Border DockPanel.Dock="Left" Background="White" CornerRadius="3" Margin="0,0,0,10">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                        </Border.Effect>
+                        <DockPanel Height="170" LastChildFill="False" VerticalAlignment="Top" Width="250">
+                            <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="申报完成情况" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                            </Border>
+                        </DockPanel>
+                    </Border>
+                    <Border DockPanel.Dock="Left" Background="White" CornerRadius="3" Margin="10,0,0,10">
+                        <Border.Effect>
+                            <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                        </Border.Effect>
+                        <DockPanel Height="170" LastChildFill="False" VerticalAlignment="Top">
+                            <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="申报实时到位率"
+                                           VerticalAlignment="Center" Height="19" Width="163"
+                                           FontSize="12" FontWeight="Bold" FontFamily="Elephant"
+                                           Foreground="White" Margin="10,5,3,3"/>
+                            </Border>
+                            <StackPanel Width="115" DockPanel.Dock="Left" Margin="0,10,0,0">
+                                <Controls:UI_AngularGauge x:Name="gaugeGeneratePrice"/>
+                                <Label Content="发电报价数据" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Width="115" DockPanel.Dock="Left" Margin="0,10,0,0">
+                                <Controls:UI_AngularGauge x:Name="gaugeParamsClaim"/>
+                                <Label Content="参数申报数据" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Width="115" DockPanel.Dock="Left" Margin="0,10,0,0">
+                                <Controls:UI_AngularGauge x:Name="gaugeUserSideClaim"/>
+                                <Label Content="用户侧报价数据" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+                        </DockPanel>
+                    </Border>
+                </DockPanel>
+
+                <Border DockPanel.Dock="Bottom" Background="White" CornerRadius="3" Margin="0,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                    </Border.Effect>
+                    <DockPanel Height="220" LastChildFill="True" VerticalAlignment="Bottom"  Margin="0,0,0,0" >
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="市场成员接入信息" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                        </Border>
+                        <DockPanel Height="190" LastChildFill="False" VerticalAlignment="Bottom"  Margin="0,0,0,0" DockPanel.Dock="Bottom">
+                            <StackPanel Height="190" VerticalAlignment="Top" Width="220" DockPanel.Dock="Left">
+                                <Controls:UI_DoughnutChart x:Name="doughnutCapacity"/>
+                                <Label Content="发电集团装机容量" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Height="190" VerticalAlignment="Top" Width="190" DockPanel.Dock="Left">
+                                <Controls:UI_DoughnutChart x:Name="doughnutUnitType"/>
+                                <Label Content="机组类型装机容量" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+                            <StackPanel Height="190" VerticalAlignment="Top" Width="190" DockPanel.Dock="Left">
+                                <Controls:UI_DoughnutChart x:Name="doughnutUser"/>
+                                <Label Content="分地区用户个数" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                            </StackPanel>
+
+                        </DockPanel>
+                    </DockPanel>
+                </Border>
+                <Border DockPanel.Dock="Top" Background="White" CornerRadius="3" Margin="0,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                    </Border.Effect>
+                    <DockPanel LastChildFill="True">
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="日前负荷预测与出清信息" VerticalAlignment="Top" Height="19" Width="230" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,0,5"/>
+                        </Border>
+                        <Controls:UI_LineChart x:Name="uiChart_LoadPredict" Margin="5,5,5,5"/>
+                    </DockPanel>
+                </Border>
+            </DockPanel>
+            <DockPanel LastChildFill="True" Width="500" DockPanel.Dock="Right">
+                <Border DockPanel.Dock="Top" Background="White" CornerRadius="3" Margin="10,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                    </Border.Effect>
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="日前市场出清电价" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                        </Border>
+                        <Controls:UI_LineChart x:Name="uiChart_SettlePrice" Margin="5,0,5,5" Height="120" DockPanel.Dock="Top"/>
+                    </DockPanel>
+                </Border>
+                <Border DockPanel.Dock="Top" Background="White" CornerRadius="3" Margin="10,0,0,10">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                    </Border.Effect>
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="各发电机出清电价" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                        </Border>
+                        <Controls:UI_LineChart x:Name="uiChart_UnitSettlePrice" Margin="5,0,5,4" Height="120" DockPanel.Dock="Top"/>
+                    </DockPanel>
+                </Border>
+                <Border DockPanel.Dock="Bottom" Background="White" CornerRadius="3" Margin="10,0,0,0">
+                    <Border.Effect>
+                        <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                    </Border.Effect>
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top" Margin="0,0,0,0" CornerRadius="3,3,0,0" Background="#FF444749">
+                            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="稳定断面信息" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                        </Border>
+                        <DataGrid x:Name="dataGridNfgpData" RenderTransformOrigin="0.5,0.5" Margin="5,5,5,5"
+                                  AutoGenerateColumns="False" CanUserAddRows="False"
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  MaxHeight="500"
+                                  ItemsSource="{Binding Path=NfgpData}">
+                                <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding T}" ClipboardContentBinding="{x:Null}" Header="时间" Width="90"/>
+                                        <DataGridTextColumn Binding="{Binding Nfg}" ClipboardContentBinding="{x:Null}" Header="断面名称" Width="100"/>
+                                        <DataGridTextColumn Binding="{Binding Limt}" ClipboardContentBinding="{x:Null}" Header="限额值（MW）" Width="100"/>
+                                        <DataGridTextColumn Binding="{Binding Power}" ClipboardContentBinding="{x:Null}" Header="实际值（MW）" Width="100"/>
+                                        <DataGridTextColumn Binding="{Binding LoadRate}" ClipboardContentBinding="{x:Null}" Header="负载率 (%)" Width="*"/>
+                                </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </Border>
+            </DockPanel>
+            <Border DockPanel.Dock="Top" Background="White" CornerRadius="3" Margin="10,0,0,0">
+                <Border.Effect>
+                    <DropShadowEffect Color="#ABACAF" BlurRadius="8" ShadowDepth="1" Direction="315" RenderingBias="Quality"/>
+                </Border.Effect>
+                <DockPanel LastChildFill="True">
+                    <Border DockPanel.Dock="Top" Margin="0,0,0,10" CornerRadius="3,3,0,0" Background="#FF444749">
+                        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="系统运行" VerticalAlignment="Top" Height="19" Width="163" FontSize="12" FontWeight="Bold" FontFamily="Elephant" Foreground="White" Margin="10,5,3,3"/>
+                    </Border>
+                    <DockPanel Height="100" LastChildFill="True" VerticalAlignment="Bottom"  Margin="0,0,0,0" DockPanel.Dock="Bottom" Width="442">
+                        <Slider Height="25" VerticalAlignment="Top" DockPanel.Dock="Top" Margin="10"/>
+                        <DockPanel Margin="0,-10,0,5">
+                            <Image Height="36" Width="36" HorizontalAlignment="Left" Margin="10" DockPanel.Dock="Left" Cursor="Hand" Source="/AutinPower.WPF;component/Images/fast-forward.png"/>
+                            <Image Height="36" Width="36" HorizontalAlignment="Left" Margin="10" DockPanel.Dock="Left" Cursor="Hand" Source="/AutinPower.WPF;component/Images/fast-backward.png"/>
+                            <Image Height="36" Width="36" HorizontalAlignment="Right" Margin="10" DockPanel.Dock="Right" Cursor="Hand" Source="/AutinPower.WPF;component/Images/stop-button.png"/>
+                            <Image Height="36" Width="36" HorizontalAlignment="Right" Margin="10" DockPanel.Dock="Right" Cursor="Hand" Source="/AutinPower.WPF;component/Images/step-forward.png"/>
+                        </DockPanel>
+                    </DockPanel>
+                    <DockPanel LastChildFill="True" VerticalAlignment="Top" HorizontalAlignment="Stretch" DockPanel.Dock="Top" Height="30" Margin="5,5,5,5">
+                            <Button x:Name="buttonPrepareSettlement" Content="数据准备" Height="25" DockPanel.Dock="Left" HorizontalAlignment="Left" Width="70" Margin="10,0,0,0" Click="buttonPrepareSettlement_ClickAsync"/>
+                            <Button x:Name="buttonPostSettlement" Content="出清结束" Height="25" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="70" Margin="0,0,10,0" Click="buttonPostSettlement_ClickAsync"/>
+                            <Button x:Name="buttonStartSettlement" Content="出清计算" Height="25" Width="70" Click="buttonStartSettlement_ClickAsync"/>
+                    </DockPanel>
+                    <DockPanel LastChildFill="True" VerticalAlignment="Top" HorizontalAlignment="Stretch" DockPanel.Dock="Top" Height="30" Margin="5,5,5,5">
+                        <TextBlock Height="30" TextWrapping="Wrap" Text="时间: 2019-6-17 15:00" VerticalAlignment="Center" Padding="10" Foreground="#FF128DE2" FontWeight="Bold" HorizontalAlignment="Center"/>
+                    </DockPanel>
+                    <Frame x:Name="frameCircuit" Content="" Margin="5,5,5,5"/>
+                </DockPanel>
+            </Border>
+        </DockPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

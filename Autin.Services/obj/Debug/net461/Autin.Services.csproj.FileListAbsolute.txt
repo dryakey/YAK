@@ -1,0 +1,4 @@
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\net461\Autin.Services.csprojAssemblyReference.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\net461\Autin.Services.csproj.CoreCompileInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\net461\Autin.Services.AssemblyInfoInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\net461\Autin.Services.AssemblyInfo.cs

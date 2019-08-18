@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="AutinPower.WPF.Controls.UI_AngularGauge"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AutinPower.WPF.Controls"
+             mc:Ignorable="d" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             Width="auto" Height="auto">
+    <Grid x:Name="mainGrid" Width="100" Height="100">
+        <lvc:AngularGauge Value="{Binding Value}" FromValue="0" ToValue="100" 
+                          LabelsStep="20" TicksStep="25" Wedge="250"
+                          TicksForeground="White" Foreground="White" 
+                          FontWeight="Regular" FontSize="10"
+                          SectionsInnerRadius=".5" Margin="10">
+            <lvc:AngularGauge.Sections>
+                <lvc:AngularSection x:Name="section3" FromValue="0" ToValue="100" Fill="{Binding BackgroundFill}"/>
+                <lvc:AngularSection x:Name="section0" FromValue="{Binding FromValue0}" ToValue="{Binding ToValue0}" Fill="{Binding Fill0}"/>
+                <lvc:AngularSection x:Name="section1" FromValue="{Binding ToValue0}" ToValue="{Binding ToValue1}" Fill="{Binding Fill1}"/>
+                <lvc:AngularSection x:Name="section2" FromValue="{Binding ToValue1}" ToValue="100" Fill="{Binding BackgroundFill}"/>
+            </lvc:AngularGauge.Sections>
+        </lvc:AngularGauge>
+    </Grid>
+</UserControl>

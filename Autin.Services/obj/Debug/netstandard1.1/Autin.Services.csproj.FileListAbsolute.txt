@@ -1,0 +1,8 @@
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\bin\Debug\netstandard1.1\Autin.Services.deps.json
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\bin\Debug\netstandard1.1\Autin.Services.dll
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\bin\Debug\netstandard1.1\Autin.Services.pdb
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.1\Autin.Services.csproj.CoreCompileInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.1\Autin.Services.AssemblyInfoInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.1\Autin.Services.AssemblyInfo.cs
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.1\Autin.Services.dll
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.1\Autin.Services.pdb

@@ -1,0 +1,46 @@
+﻿<Window x:Class="AutinPower.WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutinPower.WPF"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="澳汀电力市场模拟培训系统" Height="495" Width="365" Loaded="Window_Loaded">
+    <WindowChrome.WindowChrome>
+        <WindowChrome 
+        CaptionHeight="0"
+        ResizeBorderThickness="5" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Frame NavigationUIVisibility="Hidden" x:Name="mainFrame" Content="" Margin="0"/>
+        <StackPanel FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="buttonMinimize" Width="15" Height="15" Margin="0" VerticalAlignment="Top" 
+                HorizontalAlignment="Right" FontSize="10"
+                BorderThickness="0" Click="buttonMinimize_Click"
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/opMinimize.png"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="buttonMaxNormal" Width="15" Height="15" Margin="0" VerticalAlignment="Top" 
+                HorizontalAlignment="Right" FontSize="10"
+                BorderThickness="0" Visibility="Collapsed"
+                Click="ButtonNormal_Click"
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/opMaximize.png"/>
+                </Button.Background>
+            </Button>
+            <Button Width="15" Height="15" Margin="0" VerticalAlignment="Top" 
+                HorizontalAlignment="Right" FontSize="10"
+                BorderThickness="0"
+                Click="ButtonClose_Click"
+                >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/opClose.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

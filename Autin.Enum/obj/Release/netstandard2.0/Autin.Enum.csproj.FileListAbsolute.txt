@@ -1,0 +1,9 @@
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\bin\Release\netstandard2.0\Autin.Enum.deps.json
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\bin\Release\netstandard2.0\Autin.Enum.dll
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\bin\Release\netstandard2.0\Autin.Enum.pdb
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.csprojAssemblyReference.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.csproj.CoreCompileInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.AssemblyInfoInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.AssemblyInfo.cs
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.dll
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Enum\obj\Release\netstandard2.0\Autin.Enum.pdb

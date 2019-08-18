@@ -1,0 +1,21 @@
+﻿<Page x:Class="AutinPower.WPF.Pages.PageLogin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutinPower.WPF.Pages"
+      xmlns:Controls="clr-namespace:AutinPower.WPF.Controls"
+      mc:Ignorable="d" 
+      Title="PageLogin" Height="495" Width="365">
+
+    <Grid Background="#FFF3F3F3">
+        <Button x:Name="buttonLogin" Content="Login" HorizontalAlignment="Left" Margin="57,351,0,0" VerticalAlignment="Top" Width="253" Click="ButtonLogin_Click" Height="34" Background="#FF0686C1" Foreground="#FFEEE7E7" BorderThickness="0"/>
+        <Controls:UI_LoadingSpinner x:Name="ctrlLoadingSpinner" Height="24" Width="24" Margin="270,320,76,85" Visibility="Hidden"/>
+        <Image HorizontalAlignment="Center" Height="65" Margin="147,90,161,0" VerticalAlignment="Top" Width="62" Source="/AutinPower.WPF;component/Images/leaf.png"/>
+        <TextBox x:Name="textboxUserName" HorizontalAlignment="Left" Height="23" Margin="100,216,0,0" TextWrapping="Wrap" Text="wldevau@gmail.com" VerticalAlignment="Top" Width="210" Background="{x:Null}" Foreground="#FF9B9B9B" BorderThickness="0,0,0,1"/>
+        <PasswordBox x:Name="textboxPassword" HorizontalAlignment="Left" Margin="100,268,0,0" VerticalAlignment="Top" Width="210" Background="{x:Null}" Foreground="#FF7A7676" PasswordChar="*" BorderThickness="0,0,0,1" Height="26" KeyUp="textboxPassword_KeyUp"/>
+        <Image HorizontalAlignment="Center" Height="23" Margin="57,216,287,0" VerticalAlignment="Top" Width="26" RenderTransformOrigin="0.462,0.5" Source="/AutinPower.WPF;component/Images/user.png"/>
+        <Image HorizontalAlignment="Center" Height="23" Margin="57,271,287,0" VerticalAlignment="Top" Width="26" Source="/AutinPower.WPF;component/Images/password.png"/>
+        <TextBlock x:Name="textblockInfo" HorizontalAlignment="Left" Margin="57,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="22" Width="253" Foreground="#FF044695"/>
+    </Grid>
+</Page>

@@ -1,0 +1,25 @@
+﻿<Page x:Class="AutinPower.WPF.Pages.PageNFGLimit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutinPower.WPF.Pages"
+      xmlns:Controls="clr-namespace:AutinPower.WPF.Controls"
+      mc:Ignorable="d" d:DesignWidth="800"
+      Title="PageNFGLimit" Height="551.544">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="550"/>
+            <ColumnDefinition Width="49*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/AutinPower.WPF;component/Images/model.JPG" Height="413" VerticalAlignment="Top" Margin="11,80,10,0" Grid.Column="1"/>
+        <Controls:UI_LabeledTextBox Label="限额：" HorizontalAlignment="Left" Height="30" Margin="264,108,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1"/>
+        <Controls:UI_LabeledTextBox Label="限额：" HorizontalAlignment="Left" Height="30" Margin="264,200,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1"/>
+        <Controls:UI_LabeledTextBox Label="限额：" HorizontalAlignment="Left" Height="30" Margin="240,312,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1"/>
+        <Controls:UI_LabeledTextBox Label="限额：" HorizontalAlignment="Left" Height="30" Margin="479,214,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Controls:UI_LabeledTextBox Label="限额：" Height="Auto" Margin="0,260,446,258" Width="138" HorizontalAlignment="Right" Grid.ColumnSpan="2"/>
+        <Controls:UI_LabeledTextBox Label="限额：" HorizontalAlignment="Left" Height="30" Margin="124,463,0,0" VerticalAlignment="Top" Width="138" Grid.Column="1"/>
+    </Grid>
+</Page>

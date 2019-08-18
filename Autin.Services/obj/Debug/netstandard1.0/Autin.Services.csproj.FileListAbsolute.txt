@@ -1,0 +1,3 @@
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.0\Autin.Services.csproj.CoreCompileInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.0\Autin.Services.AssemblyInfoInputs.cache
+D:\Softwares\Laravel\Autin\AutinPower\Autin.Services\obj\Debug\netstandard1.0\Autin.Services.AssemblyInfo.cs
